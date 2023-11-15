@@ -1,6 +1,33 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "assignAutomerge": true,
+  "automergeType": "pr",
+  "dependencyDashboard": true,
+  "extends": ["config:recommended", ":pinAllExceptPeerDependencies"],
+  "labels": ["Upgrade Dependencies"],
+  "platformAutomerge": true,
+  "prCreation": "immediate",
+  "packageRules": [
+    {
+      "description": "Group all DevDependencies together",
+      "groupName": "DevDependencies",
+      "groupSlug": "auto-merge-dev-dependencies-updates",
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge non-major updates",
+      "groupName": "Dependencies (non-major)",
+      "groupSlug": "auto-merge-non-major-updates",
+      "matchUpdateTypes": ["minor", "patch", "lockFileMaintenance"],
+      "automerge": true
+    },
+    {
+      "description": "Group prettier packages",
+      "groupName": "Prettier Packages",
+      "groupSlug": "auto-merge-prettier-packages-updates",
+      "matchPackageNames": ["prettier"],
+      "matchPackagePatterns": ["^prettier-plugin-"]
+    }
   ]
 }
