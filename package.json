@@ -18,13 +18,16 @@
     "eslint:lint": "eslint --max-warnings=0 .",
     "eslint:fix": "eslint --max-warnings=0 --fix .",
     "prettier:lint": "prettier --check .",
-    "prettier:fix": "prettier --write -l ."
+    "prettier:fix": "prettier --write -l .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "3.3.8",
     "vue-router": "4.2.5"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@rushstack/eslint-patch": "1.6.0",
     "@tsconfig/node18": "18.2.2",
     "@types/node": "20.9.4",
@@ -35,6 +38,7 @@
     "@vue/tsconfig": "0.4.0",
     "eslint": "8.54.0",
     "eslint-plugin-vue": "9.18.1",
+    "husky": "^8.0.0",
     "npm-run-all2": "6.1.1",
     "prettier": "3.1.0",
     "typescript": "5.3.2",

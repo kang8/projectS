@@ -10,6 +10,9 @@ coverage
 # Ignore all HTML files:
 *.html
 
+# Ignore config files:
+commitlint.config.js
+
 # pnpm
 /pnpm-lock.yaml
 
