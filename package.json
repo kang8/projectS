@@ -13,8 +13,12 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
-    "lint": "eslint knowledgeGraph --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src"
+    "lint": "pnpm run prettier:lint && pnpm run eslint:lint",
+    "lint:fix": "pnpm run eslint:fix && pnpm run prettier:fix",
+    "eslint:lint": "eslint --max-warnings=0 .",
+    "eslint:fix": "eslint --max-warnings=0 --fix .",
+    "prettier:lint": "prettier --check .",
+    "prettier:fix": "prettier --write -l ."
   },
   "dependencies": {
     "vue": "3.3.8",
