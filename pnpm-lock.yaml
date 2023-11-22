@@ -14,10 +14,10 @@ dependencies:
 
 devDependencies:
   '@commitlint/cli':
-    specifier: ^18.4.3
+    specifier: 18.4.3
     version: 18.4.3(typescript@5.3.2)
   '@commitlint/config-conventional':
-    specifier: ^18.4.3
+    specifier: 18.4.3
     version: 18.4.3
   '@rushstack/eslint-patch':
     specifier: 1.6.0
@@ -50,7 +50,7 @@ devDependencies:
     specifier: 9.18.1
     version: 9.18.1(eslint@8.54.0)
   husky:
-    specifier: ^8.0.0
+    specifier: 8.0.3
     version: 8.0.3
   npm-run-all2:
     specifier: 6.1.1
