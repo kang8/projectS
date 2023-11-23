@@ -7,6 +7,7 @@
   "labels": ["Upgrade Dependencies"],
   "platformAutomerge": true,
   "prCreation": "immediate",
+  "baseBranches": ["develop"],
   "packageRules": [
     {
       "description": "Group all DevDependencies together",
